@@ -1,0 +1,35 @@
+{
+  "name": "browserify-transform",
+  "version": "0.0.0",
+  "description": "Runs a browserify transform on a single file. Useful for make pipeline tasks.",
+  "main": "index.js",
+  "bin": {
+    "browserify-transform": "browserify-transform.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/TooTallNate/browserify-transform.git"
+  },
+  "keywords": [
+    "browserify",
+    "transform",
+    "run",
+    "cli",
+    "single",
+    "file",
+    "make",
+    "parallel"
+  ],
+  "author": "Nathan Rajlich <nathan@tootallnate.net> (http://n8.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TooTallNate/browserify-transform/issues"
+  },
+  "homepage": "https://github.com/TooTallNate/browserify-transform",
+  "dependencies": {
+    "minimist": "~0.2.0"
+  }
+}
