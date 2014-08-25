@@ -1,6 +1,6 @@
 {
   "name": "browserify-transform",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Runs a browserify transform on a single file. Useful for make pipeline tasks.",
   "main": "index.js",
   "bin": "bin/browserify-transform.js",
