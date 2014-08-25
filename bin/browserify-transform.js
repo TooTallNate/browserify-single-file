@@ -37,8 +37,10 @@ if (transform) {
 // apply any "plugin"
 var plugin = argv.plugin || argv.p;
 if (plugin) {
-  var p = require(plugin);
-  p(bundle);
+  var pargv = minimist(plugin.split(/\s+/));
+  var pname = pargv._[0];
+  var p = require(pname);
+  p(bundle, pargv);
 }
 
 bundle.emit('bundle');
