@@ -4,34 +4,24 @@
  * Module dependencies.
  */
 
-var fs = require('fs');
-var events = require('events');
 var minimist = require('minimist');
+var BrowserifySingleFile = require('../');
 
 var argv = minimist(process.argv.slice(2));
 
 var filenames = argv._;
 if (filenames.length !== 1) {
-  throw new Error('only one source filename supported at a time');
+  throw new Error('only one source filename may be given at a time');
 }
-var filename = filenames[0];
+var filename = filenames.shift();
 
-var source = fs.createReadStream(filename);
-var next = source;
-
-// emulate browserify's API a little bit
-var bundle = new events.EventEmitter();
-bundle._extensions = Object.keys(require.extensions);
-bundle._entries = [ filename ];
-bundle.transform = function (t) {
-  next = next.pipe(t(filename));
-};
+var bsf = new BrowserifySingleFile(filename);
 
 // apply any "transform"
 var transform = argv.transform || argv.t;
 if (transform) {
   var t = require(transform);
-  bundle.transform(t);
+  bsf.transform(t);
 }
 
 // apply any "plugin"
@@ -40,10 +30,8 @@ if (plugin) {
   var pargv = minimist(plugin.split(/\s+/));
   var pname = pargv._[0];
   var p = require(pname);
-  p(bundle, pargv);
+  p(bsf, pargv);
 }
 
-bundle.emit('bundle');
-
 // output the pipeline to `stdout`
-next.pipe(process.stdout);
+bsf.bundle().pipe(process.stdout);
