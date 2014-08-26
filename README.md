@@ -2,6 +2,7 @@ browserify-single-file
 ======================
 ### Runs browserify transforms/plugins on a single file.
 #### Useful for make pipeline tasks.
+[![Build Status](https://travis-ci.org/TooTallNate/browserify-single-file.svg?branch=master)](https://travis-ci.org/TooTallNate/browserify-single-file)
 
 
 Like browserify(1), but just for a single file. Designed be used inside a
