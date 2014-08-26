@@ -5,7 +5,7 @@
   "main": "index.js",
   "bin": "bin/browserify-single-file.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --reporter spec"
   },
   "repository": {
     "type": "git",
@@ -29,5 +29,10 @@
   "homepage": "https://github.com/TooTallNate/browserify-single-file",
   "dependencies": {
     "minimist": "~0.2.0"
+  },
+  "devDependencies": {
+    "coffeeify": "~0.7.0",
+    "mocha": "~1.21.4",
+    "stream-to-array": "~2.0.0"
   }
 }
