@@ -1,4 +1,11 @@
 
+0.3.0 / 2014-08-27
+==================
+
+ * test: add "coffeify" and "deamdify" combo test case
+ * test: add "deamdify" test case
+ * bin: add support for multiple --transform/--plugin arguments
+
 0.2.1 / 2014-08-27
 ==================
 

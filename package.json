@@ -1,6 +1,6 @@
 {
   "name": "browserify-single-file",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Runs browserify transforms/plugins on a single file. Useful for make pipeline tasks.",
   "main": "index.js",
   "bin": "bin/browserify-single-file.js",
