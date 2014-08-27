@@ -11,7 +11,7 @@ var BrowserifySingleFile = require('../');
 
 describe('deamdify', function () {
 
-  it('should convert AMD style modules to CommonJS style', function (done) {
+  it('should convert AMD-style modules to CommonJS-style', function (done) {
     var filename = path.resolve(__dirname, 'fixtures', 'amd.js');
     var bsf = new BrowserifySingleFile(filename);
 
