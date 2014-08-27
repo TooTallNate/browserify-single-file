@@ -1,4 +1,12 @@
 
+0.2.1 / 2014-08-27
+==================
+
+ * add .travis.yml file
+ * travis: don't test node v0.8.x
+ * README: add Travis-CI badge
+ * package: add "plugin" keyword
+
 0.2.0 / 2014-08-26
 ==================
 
