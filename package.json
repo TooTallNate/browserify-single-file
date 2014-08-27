@@ -34,6 +34,7 @@
   "devDependencies": {
     "browserify-jade": "~0.1.1",
     "coffeeify": "~0.7.0",
+    "deamdify": "0.1.1",
     "mocha": "~1.21.4",
     "stream-to-array": "~2.0.0",
     "tsify": "~0.3.0"
