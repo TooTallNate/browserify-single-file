@@ -54,6 +54,6 @@ Now when it comes time to invoke `browserify(1)`, there's no need to use any
 slow `--transform` or `--plugin` options since the transformation has already
 taken place in the compiled `foo.js` file.
 
-For future invokations of browserify, it won't need to recompile the TypeScript
+For future invocations of browserify, it won't need to recompile the TypeScript
 file unless it gets changed again, since Make is good at keeping track of `mtime`
 changes.
